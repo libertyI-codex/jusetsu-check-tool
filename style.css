@@ -1,0 +1,536 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: #1f2937;
+  background: #ffffff;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+}
+
+.app-header {
+  border-bottom: 1px solid #d7dee8;
+  background: #f8fafc;
+  padding: 24px 32px;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #14213d;
+  font-size: 28px;
+  letter-spacing: 0;
+}
+
+.app-header p {
+  margin: 6px 0 0;
+  color: #526070;
+  font-size: 14px;
+}
+
+.app-layout {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+}
+
+.panel,
+.summary-area {
+  margin-bottom: 24px;
+}
+
+.panel {
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.panel h2,
+.summary-area h2 {
+  margin: 0;
+  color: #14213d;
+  font-size: 22px;
+}
+
+.property-panel {
+  padding: 20px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+label {
+  display: block;
+  color: #334155;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #b8c2d1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font: inherit;
+  font-size: 16px;
+}
+
+input,
+select {
+  min-height: 44px;
+  padding: 9px 10px;
+}
+
+textarea {
+  min-height: 76px;
+  padding: 9px 10px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #d7dee8;
+  padding: 20px;
+}
+
+.section-title-row p {
+  margin: 6px 0 0;
+  color: #526070;
+  font-size: 14px;
+}
+
+.secondary-button {
+  min-height: 44px;
+  border: 1px solid #b8c2d1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 8px 14px;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.secondary-button:hover {
+  background: #f1f5f9;
+}
+
+.checklist-container {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+}
+
+.category-block {
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #d7dee8;
+  background: #f8fafc;
+  padding: 12px 14px;
+}
+
+.category-title h3 {
+  margin: 0;
+  color: #14213d;
+  font-size: 18px;
+}
+
+.category-count {
+  color: #526070;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checklist-table-wrap {
+  overflow-x: auto;
+}
+
+.checklist-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.checklist-table th,
+.checklist-table td {
+  border-bottom: 1px solid #e5eaf0;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.checklist-table th {
+  background: #fbfdff;
+  color: #334155;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.checklist-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.item-name {
+  min-width: 220px;
+  font-weight: 700;
+}
+
+.item-hint {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.status-select {
+  min-width: 120px;
+}
+
+.important-checkbox-cell {
+  min-width: 120px;
+}
+
+.important-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.important-checkbox-label input {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.summary-area {
+  border-top: 3px solid #14213d;
+  padding-top: 20px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.summary-panel {
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.summary-panel h3 {
+  margin: 0;
+  border-bottom: 1px solid #d7dee8;
+  background: #f8fafc;
+  color: #14213d;
+  font-size: 17px;
+  padding: 12px 14px;
+}
+
+.summary-list {
+  min-height: 92px;
+  margin: 0;
+  padding: 12px 14px 14px 32px;
+}
+
+.summary-list li {
+  margin-bottom: 8px;
+}
+
+.summary-list li:last-child {
+  margin-bottom: 0;
+}
+
+.empty-message {
+  list-style: none;
+  margin-left: -18px;
+  color: #64748b;
+}
+
+.summary-category {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.summary-memo {
+  margin-top: 3px;
+  color: #475569;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .property-grid,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title-row {
+    display: block;
+  }
+
+  .secondary-button {
+    margin-top: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .app-header {
+    padding: 18px 16px;
+  }
+
+  .app-header h1 {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  .app-header p,
+  .section-title-row p {
+    font-size: 14px;
+  }
+
+  .app-layout {
+    padding: 14px 12px 32px;
+  }
+
+  .panel,
+  .summary-panel {
+    border-radius: 6px;
+  }
+
+  .panel h2,
+  .summary-area h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .property-panel,
+  .section-title-row,
+  .checklist-container {
+    padding: 14px;
+  }
+
+  .property-grid {
+    gap: 14px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input,
+  select {
+    min-height: 48px;
+    padding: 11px 12px;
+  }
+
+  textarea {
+    min-height: 96px;
+    padding: 11px 12px;
+  }
+
+  .secondary-button {
+    min-height: 48px;
+    padding: 10px 14px;
+    white-space: normal;
+  }
+
+  .checklist-container {
+    gap: 14px;
+  }
+
+  .category-title {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .category-title h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .category-count {
+    flex: 0 0 auto;
+    padding-top: 2px;
+  }
+
+  .checklist-table-wrap {
+    overflow-x: visible;
+  }
+
+  .checklist-table,
+  .checklist-table thead,
+  .checklist-table tbody,
+  .checklist-table tr,
+  .checklist-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .checklist-table {
+    border-collapse: separate;
+  }
+
+  .checklist-table thead {
+    display: none;
+  }
+
+  .checklist-table tr {
+    border-bottom: 1px solid #d7dee8;
+    padding: 12px;
+  }
+
+  .checklist-table tr:last-child {
+    border-bottom: 0;
+  }
+
+  .checklist-table td {
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .checklist-table td + td {
+    margin-top: 12px;
+  }
+
+  .checklist-table td::before {
+    display: block;
+    margin-bottom: 5px;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .checklist-table td:nth-child(1)::before {
+    content: "調査項目";
+  }
+
+  .checklist-table td:nth-child(2)::before {
+    content: "状態";
+  }
+
+  .checklist-table td:nth-child(3)::before {
+    content: "メモ";
+  }
+
+  .checklist-table td:nth-child(4)::before {
+    content: "重説反映";
+  }
+
+  .item-name {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .item-hint {
+    font-size: 13px;
+  }
+
+  .status-select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .important-checkbox-cell {
+    min-width: 0;
+  }
+
+  .important-checkbox-label {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid #b8c2d1;
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+
+  .important-checkbox-label input {
+    width: 24px;
+    height: 24px;
+  }
+
+  .summary-area {
+    padding-top: 16px;
+  }
+
+  .summary-grid {
+    gap: 12px;
+  }
+
+  .summary-panel h3 {
+    font-size: 16px;
+    padding: 11px 12px;
+  }
+
+  .summary-list {
+    min-height: 72px;
+    padding: 12px 12px 12px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 16px 12px;
+  }
+
+  .app-header h1 {
+    font-size: 20px;
+  }
+
+  .app-layout {
+    padding: 12px 10px 28px;
+  }
+
+  .property-panel,
+  .section-title-row,
+  .checklist-container {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重説用物件調査ツール Ver.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>重説用物件調査ツール Ver.1</h1>
+      <p>重要事項説明書作成前の物件調査チェックリスト</p>
+    </div>
+  </header>
+
+  <main class="app-layout">
+    <section class="panel property-panel" aria-labelledby="property-heading">
+      <h2 id="property-heading">物件情報</h2>
+      <div class="property-grid">
+        <label>
+          所在地
+          <input id="propertyAddress" type="text" placeholder="例：東京都千代田区〇〇1-2-3">
+        </label>
+        <label>
+          地番
+          <input id="propertyLotNumber" type="text" placeholder="例：〇〇一丁目123番4">
+        </label>
+        <label>
+          物件種別
+          <select id="propertyType">
+            <option value="土地">土地</option>
+            <option value="戸建">戸建</option>
+            <option value="マンション">マンション</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="checklist-heading">
+      <div class="section-title-row">
+        <div>
+          <h2 id="checklist-heading">重説調査チェックリスト</h2>
+          <p>状態・メモ・重説反映チェックを入力すると、下部の一覧に自動反映されます。</p>
+        </div>
+        <button id="resetButton" class="secondary-button" type="button">入力内容をリセット</button>
+      </div>
+
+      <div id="checklistContainer" class="checklist-container"></div>
+    </section>
+
+    <section class="summary-area" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">確認状況一覧</h2>
+      <div class="summary-grid">
+        <section class="summary-panel">
+          <h3>未確認項目</h3>
+          <ul id="uncheckedList" class="summary-list"></ul>
+        </section>
+        <section class="summary-panel">
+          <h3>確認中項目</h3>
+          <ul id="inProgressList" class="summary-list"></ul>
+        </section>
+        <section class="summary-panel">
+          <h3>重説反映チェック済項目</h3>
+          <ul id="importantList" class="summary-list"></ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="checklistData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
