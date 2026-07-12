@@ -107,19 +107,32 @@ textarea:focus {
   border-color: #2563eb;
 }
 
-.section-title-row {
+.section-title-row,
+.section-subtitle-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
+}
+
+.section-title-row {
   border-bottom: 1px solid #d7dee8;
   padding: 20px;
+}
+
+.section-subtitle-row {
+  align-items: center;
+  margin-bottom: 14px;
 }
 
 .section-title-row p {
   margin: 6px 0 0;
   color: #526070;
   font-size: 14px;
+}
+
+.section-subtitle-row h3 {
+  margin: 0;
 }
 
 .secondary-button {
@@ -138,6 +151,42 @@ textarea:focus {
 
 .secondary-button:hover {
   background: #f1f5f9;
+}
+
+.app-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #d7dee8;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.tab-button {
+  min-height: 44px;
+  border: 1px solid #b8c2d1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.tab-button.is-active {
+  border-color: #14213d;
+  background: #14213d;
+  color: #ffffff;
+}
+
+.app-view {
+  display: none;
+}
+
+.app-view.is-active {
+  display: block;
 }
 
 .checklist-container {
@@ -301,9 +350,283 @@ textarea:focus {
   word-break: break-word;
 }
 
+.valuation-panel {
+  overflow: hidden;
+}
+
+.valuation-form {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.valuation-notice {
+  margin: 20px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 700;
+  padding: 16px;
+}
+
+.valuation-section {
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.valuation-section h3 {
+  margin: 0 0 14px;
+  color: #14213d;
+  font-size: 17px;
+}
+
+.valuation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.valuation-grid.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wide-field,
+.field-help {
+  margin-top: 14px;
+}
+
+.field-help,
+.valuation-note,
+.valuation-disclaimer {
+  color: #526070;
+  font-size: 13px;
+}
+
+.valuation-disclaimer {
+  background: #f8fafc;
+}
+
+.adjustment-list {
+  display: grid;
+  gap: 12px;
+}
+
+.adjustment-card {
+  display: grid;
+  grid-template-columns: 160px minmax(140px, 180px) minmax(120px, 180px) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid #e5eaf0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.adjustment-enabled {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.adjustment-enabled input {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.adjustment-name-text {
+  display: block;
+  color: #1f2937;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.result-card {
+  margin-top: 14px;
+  border: 1px solid #e5eaf0;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.subtle-card {
+  background: #fbfdff;
+}
+
+.result-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+  margin: 0;
+}
+
+.result-list div {
+  min-width: 0;
+}
+
+.result-list dt {
+  color: #526070;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.result-list dd {
+  margin: 3px 0 0;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.valuation-warning,
+.field-error,
+.valuation-error-list {
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.valuation-warning {
+  margin: 12px 0 0;
+}
+
+.field-error {
+  margin: 6px 0 0;
+}
+
+.valuation-error-list {
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff7f7;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+}
+
+.valuation-error-list ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.price-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.price-card {
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 14px;
+}
+
+.primary-price-card {
+  border-color: #14213d;
+  background: #f8fafc;
+}
+
+.price-card span {
+  display: block;
+  color: #526070;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.price-card strong {
+  display: block;
+  margin-top: 6px;
+  color: #14213d;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.detailed-price-list {
+  margin-top: 14px;
+}
+
+.updated-at-display {
+  display: grid;
+  align-content: center;
+  min-height: 44px;
+  color: #526070;
+  font-size: 14px;
+}
+
+.updated-at-display strong {
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.backup-area {
+  margin-bottom: 24px;
+}
+
+.backup-card {
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.backup-card h2 {
+  margin: 0;
+  color: #14213d;
+  font-size: 22px;
+}
+
+.backup-card p {
+  margin: 6px 0 0;
+  color: #526070;
+  font-size: 14px;
+}
+
+.backup-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+  margin-top: 16px;
+}
+
+.backup-file-label {
+  margin: 0;
+}
+
+.backup-file-input {
+  min-height: 44px;
+  padding: 8px 10px;
+}
+
+.backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.backup-message {
+  min-height: 22px;
+  margin-top: 12px;
+  color: #475569;
+  font-weight: 700;
+}
+
+.backup-message.is-success {
+  color: #166534;
+}
+
+.backup-message.is-error {
+  color: #b91c1c;
+}
+
 @media (max-width: 900px) {
   .property-grid,
-  .summary-grid {
+  .summary-grid,
+  .price-highlight-grid {
     grid-template-columns: 1fr;
   }
 
@@ -311,7 +634,7 @@ textarea:focus {
     display: block;
   }
 
-  .secondary-button {
+  .section-title-row .secondary-button {
     margin-top: 14px;
     width: 100%;
   }
@@ -340,8 +663,22 @@ textarea:focus {
     padding: 14px 12px 32px;
   }
 
+  .app-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-x: visible;
+  }
+
+  .tab-button {
+    width: 100%;
+    min-height: 48px;
+  }
+
   .panel,
-  .summary-panel {
+  .summary-panel,
+  .valuation-section,
+  .result-card,
+  .price-card {
     border-radius: 6px;
   }
 
@@ -357,7 +694,17 @@ textarea:focus {
     padding: 14px;
   }
 
-  .property-grid {
+  .property-grid,
+  .valuation-grid,
+  .valuation-grid.two-columns,
+  .adjustment-card,
+  .result-list,
+  .backup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-grid,
+  .valuation-grid {
     gap: 14px;
   }
 
@@ -380,6 +727,15 @@ textarea:focus {
     min-height: 48px;
     padding: 10px 14px;
     white-space: normal;
+  }
+
+  .section-subtitle-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .section-subtitle-row .secondary-button {
+    width: 100%;
   }
 
   .checklist-container {
@@ -491,7 +847,8 @@ textarea:focus {
     padding: 10px 12px;
   }
 
-  .important-checkbox-label input {
+  .important-checkbox-label input,
+  .adjustment-enabled input {
     width: 24px;
     height: 24px;
   }
@@ -513,6 +870,50 @@ textarea:focus {
     min-height: 72px;
     padding: 12px 12px 12px 28px;
   }
+
+  .valuation-form {
+    padding: 14px;
+  }
+
+  .valuation-notice {
+    margin: 14px;
+  }
+
+  .valuation-section {
+    padding: 14px;
+  }
+
+  .adjustment-enabled {
+    min-height: 48px;
+  }
+
+  .price-card strong {
+    font-size: 22px;
+  }
+
+  .backup-card {
+    padding: 14px;
+  }
+
+  .backup-card h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .backup-grid {
+    gap: 12px;
+  }
+
+  .backup-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .backup-actions .secondary-button,
+  .backup-file-input {
+    width: 100%;
+    min-height: 48px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -532,5 +933,72 @@ textarea:focus {
   .section-title-row,
   .checklist-container {
     padding: 12px;
+  }
+}
+.valuation-actions {
+  margin-top: 14px;
+}
+
+.appraisal-history-panel {
+  overflow: hidden;
+}
+
+.appraisal-history-list {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.appraisal-history-item {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  cursor: pointer;
+  font: inherit;
+  padding: 14px;
+  text-align: left;
+  touch-action: manipulation;
+}
+
+.appraisal-history-item:hover {
+  background: #f8fafc;
+}
+
+.appraisal-history-main {
+  color: #14213d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.appraisal-history-sub,
+.appraisal-history-prices {
+  color: #526070;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.appraisal-history-prices {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.empty-history-message {
+  margin: 0;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .valuation-actions .secondary-button,
+  .appraisal-history-item {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .appraisal-history-list {
+    padding: 14px;
   }
 }
